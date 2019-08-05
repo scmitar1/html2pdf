@@ -39,8 +39,42 @@ Ext.define('Template.Application', {
                                     doc.write(new Ext.XTemplate([
                                         html,
                                         {
-                                            getValue: function (v) {
-                                                return Ext.util.Format.number(v);
+                                            getNumberValue: function (k) {
+                                                var v = this.getValue(k);
+
+                                                if (v && Ext.isNumeric(k)) {
+                                                    return Ext.util.Format.number(v, '#,###');
+                                                } else {
+                                                    return '-';
+                                                }
+                                            },
+                                            getNumberValueForLoop: function (values, k) {
+                                                var v = values[k];
+
+                                                if (v && Ext.isNumeric(v)) {
+                                                    return Ext.util.Format.number(v, '#,###');
+                                                } else {
+                                                    return '-';
+                                                }
+                                            },
+                                            getTextValue: function (k) {
+                                                var v = this.getValue(k);
+
+                                                if (v) {
+                                                    return '' + v;
+                                                }
+                                            },
+
+                                            getValue: function (k) {
+                                                var addr = k.split('.'),
+                                                    values = this.fn.arguments[1],
+                                                    cursor = values, v;
+
+                                                Ext.each(addr, function (str) {
+                                                    v = cursor = cursor && cursor[str];
+                                                });
+
+                                                return v;
                                             }
                                         }
                                     ]).apply({
@@ -86,7 +120,27 @@ Ext.define('Template.Application', {
                                                 AMOUNT: 1234561,
                                                 RMK: 'TEST1'
                                             }
-                                        }
+                                        },
+                                        STORAGE_CHARGE: [
+                                            {
+                                                ITM: 'Over Storage Charge',
+                                                TYPE: 'Small Size',
+                                                QTY: 1,
+                                                OVER_DAY: 1,
+                                                RATE: 1,
+                                                AMT: 1000,
+                                                RMK: 'TEST'
+                                            },
+                                            {
+                                                ITM: 'Over Storage Charge',
+                                                TYPE: 'Mild Size',
+                                                QTY: 2,
+                                                OVER_DAY: 2,
+                                                RATE: 2,
+                                                AMT: 2000,
+                                                RMK: 'TEST2'
+                                            },
+                                        ]
                                     }));
                                 });
                         }

@@ -234,22 +234,22 @@
                 <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;  margin-left:4.9pt;margin-bottom:.0001pt;line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Discharging</span></p>
             </td>
             <td width=71 valign=top style='width:53.4pt;border-top:none;border-left:none;  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 1.65pt 0cm .5pt;  height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.QTY}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValue('BASIC.DISCHARGING.QTY')]}</span></p>
             </td>
             <td width=80 valign=top style='width:59.65pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.65pt 0cm .5pt;height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.CBM}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValue('BASIC.DISCHARGING.CBM')]}</span></p>
             </td>
             <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.65pt 0cm .5pt;height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.RT}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValue('BASIC.DISCHARGING.RT')]}</span></p>
             </td>
             <td width=72 valign=top style='width:53.65pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.65pt 0cm .5pt;height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.RATE}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValue('BASIC.DISCHARGING.RATE')]}</span></p>
             </td>
             <td width=81 valign=top style='width:60.85pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.65pt 0cm .5pt;height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.AMOUNT}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValue('BASIC.DISCHARGING.AMOUNT')]}</span></p>
             </td>
             <td width=141 valign=top style='width:105.5pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.65pt 0cm .5pt;height:16.35pt'>
-                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{BASIC.DISCHARGING.RMK}</span></p>
+                <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getTextValue('BASIC.DISCHARGING.RMK')]}</span></p>
             </td>
         </tr>
         <tr style='height:15.85pt'>
@@ -495,7 +495,7 @@
                 <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:2.3pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Item</span></p>
             </td>
             <td width=69 valign=top style='width:51.85pt;border:solid black 1.0pt;  border-left:none;background:#D0CECE;padding:0cm 1.1pt 0cm .7pt;height:13.7pt'>
-                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:2.05pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Amount</span></p>
+                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:2.05pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Type</span></p>
             </td>
             <td width=71 valign=top style='width:53.3pt;border:solid black 1.0pt;  border-left:none;background:#D0CECE;padding:0cm 1.1pt 0cm .7pt;height:13.7pt'>
                 <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:1.6pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Q'ty</span></p>
@@ -513,52 +513,33 @@
                 <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:1.6pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Remark</span></p>
             </td>
         </tr>
-        <tr style='height:16.7pt'>
-            <td width=140 valign=top style='width:104.75pt;border:solid black 1.0pt;  border-top:none;padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:.7pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Over Storage  Charge</span></p>
-            </td>
-            <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:.7pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Small Size</span></p>
-            </td>
-            <td width=71 valign=top style='width:53.3pt;border-top:none;border-left:none;  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 1.1pt 0cm .7pt;  height:16.7pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=80 valign=top style='width:59.75pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=72 valign=top style='width:53.65pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=222 valign=top style='width:166.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-        </tr>
-        <tr style='height:15.85pt'>
-            <td width=140 valign=top style='width:104.75pt;border:solid black 1.0pt;  border-top:none;padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:.7pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>Over Storage  Charge</span></p>
-            </td>
-            <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:1.1pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:9.0pt'>Mid Size</span></p>
-            </td>
-            <td width=71 valign=top style='width:53.3pt;border-top:none;border-left:none;  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 1.1pt 0cm .7pt;  height:15.85pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=80 valign=top style='width:59.75pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=72 valign=top style='width:53.65pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-            <td width=222 valign=top style='width:166.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
-                <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>&nbsp;</span></p>
-            </td>
-        </tr>
+
+        <tpl for="STORAGE_CHARGE">
+            <tr style='height:16.7pt'>
+                <td width=140 valign=top style='width:104.75pt;border:solid black 1.0pt;  border-top:none;padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:.7pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>{ITM}</span></p>
+                </td>
+                <td width=69 valign=top style='width:51.85pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:.7pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:10.0pt'>{TYPE}</span></p>
+                </td>
+                <td width=71 valign=top style='width:53.3pt;border-top:none;border-left:none;  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 1.1pt 0cm .7pt;  height:16.7pt'>
+                    <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValueForLoop(values, 'QTY')]}</span></p>
+                </td>
+                <td width=80 valign=top style='width:59.75pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValueForLoop(values, 'OVER_DAY')]}</span></p>
+                </td>
+                <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValueForLoop(values, 'RATE')]}</span></p>
+                </td>
+                <td width=72 valign=top style='width:53.65pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class="MsoNormal Value" style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{[this.getNumberValueForLoop(values, 'AMT')]}</span></p>
+                </td>
+                <td width=222 valign=top style='width:166.55pt;border-top:none;border-left:  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;  padding:0cm 1.1pt 0cm .7pt;height:16.7pt'>
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:  normal'><span lang=EN-US>{RMK}</span></p>
+                </td>
+            </tr>
+        </tpl>
+
         <tr style='height:15.85pt'>
             <td width=209 colspan=2 valign=top style='width:156.6pt;border:solid black 1.0pt;  border-top:none;padding:0cm 1.1pt 0cm .7pt;height:15.85pt'>
                 <p class=MsoNormal align=center style='margin-top:0cm;margin-right:0cm;  margin-bottom:0cm;margin-left:1.1pt;margin-bottom:.0001pt;text-align:center;  line-height:normal'><span lang=EN-US style='font-size:9.0pt'>Total</span></p>
