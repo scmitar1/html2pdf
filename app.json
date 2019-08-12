@@ -18,12 +18,12 @@
     "requires": [
         "font-awesome",
         "ux",
-        "package-loader"
-    ],
-
-    "uses": [
         "html2pdf"
     ],
+
+//    "uses": [
+//        "html2pdf"
+//    ],
 
     /**
      * The relative path to the application's markup file (html, jsp, asp, etc.).
