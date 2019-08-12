@@ -210,14 +210,7 @@ Ext.define('Template.Application', {
                                         });
                                     };
 
-                                if (!Ext.Package.isLoaded(pkgNm)) {
-                                    Ext.Package.load(pkgNm)
-                                        .then(function () {
-                                            callback();
-                                        });
-                                } else {
-                                    callback();
-                                }
+                                callback();
                             }
                         }
                     ]
