@@ -8,12 +8,9 @@ Ext.define('Template.Application', {
 
     name: 'Template',
 
-    quickTips: false,
-    platformConfig: {
-        desktop: {
-            quickTips: true
-        }
-    },
+    requires: [
+        'Template.*'
+    ],
 
     launch: function () {
         Ext.widget('window', {
@@ -194,12 +191,22 @@ Ext.define('Template.Application', {
                                 var pkgNm = 'html2pdf',
                                     panel = btn.up('window').down('uxiframe'),
                                     doc = panel.getDoc(),
+                                    formData,
                                     callback = function () {
                                         Html2pdfUtil.getFile({
                                             element: doc.querySelector('.WordSection1'),
                                             fileName: 'download.pdf'
                                         }).then(function (file) {
-                                            debugger;
+                                            formData = new FormData();
+                                            formData.append('file', file);
+
+                                            FileUtil.upload({
+                                                url: 'uploadFile',
+                                                formData: formData,
+                                                callback: function () {
+                                                    // TODO:
+                                                }
+                                            })
                                         });
                                     };
 
