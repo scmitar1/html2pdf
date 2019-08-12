@@ -4,11 +4,14 @@ Ext.define('Html2pdf.Util', {
     ],
     alternateClassName: 'Html2pdfUtil',
     singleton: true,
-    downloadFile: function (element) {
+    downloadFile: function (cfg) {
         if (window['html2pdf']) {
-            var inst = html2pdf();
+            var inst = html2pdf(),
+                element = cfg['element'],
+                fileName = cfg['fileName'];
+
             inst.set({
-                filename: 'pdf.pdf',
+                filename: fileName || 'pdf.pdf',
                 margin: 5
             }).from(element).save();
         }
