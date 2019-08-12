@@ -30,7 +30,7 @@ Ext.define('Template.Application', {
                             var me = this,
                                 doc = me.getDoc();
 
-                            fetch('resources/html/template1.html')
+                            fetch('resources/html/template2.html')
                                 .then(function (res) {
                                     return res.text();
                                 })
@@ -145,7 +145,6 @@ Ext.define('Template.Application', {
                                 });
                         }
                     },
-
                 }
             ],
             dockedItems: [
@@ -172,7 +171,10 @@ Ext.define('Template.Application', {
                                     panel = btn.up('window').down('uxiframe'),
                                     doc = panel.getDoc(),
                                     callback = function () {
-                                        Html2pdfUtil.downloadFile(doc.querySelector('.WordSection1'));
+                                        Html2pdfUtil.downloadFile({
+                                            element: doc.querySelector('.WordSection1'),
+                                            fileName: 'download.pdf'
+                                        });
                                     };
 
                                 if (!Ext.Package.isLoaded(pkgNm)) {
@@ -193,7 +195,10 @@ Ext.define('Template.Application', {
                                     panel = btn.up('window').down('uxiframe'),
                                     doc = panel.getDoc(),
                                     callback = function () {
-                                        Html2pdfUtil.getFile(doc.querySelector('.WordSection1')).then(function (file) {
+                                        Html2pdfUtil.getFile({
+                                            element: doc.querySelector('.WordSection1'),
+                                            fileName: 'download.pdf'
+                                        }).then(function (file) {
                                             debugger;
                                         });
                                     };
