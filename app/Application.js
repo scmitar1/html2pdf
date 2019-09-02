@@ -169,12 +169,12 @@ Ext.define('Template.Application', {
                                     doc = panel.getDoc(),
                                     callback = function () {
                                         Html2pdfUtil.downloadFile({
-                                            element: doc.querySelector('.WordSection1'),
+                                            element: doc.querySelector('.Content'),
                                             fileName: 'download.pdf'
                                         });
                                     };
 
-                                if (!Ext.Package.isLoaded(pkgNm)) {
+                                if (Ext.Package && !Ext.Package.isLoaded(pkgNm)) {
                                     Ext.Package.load(pkgNm)
                                         .then(function () {
                                             callback();
@@ -194,8 +194,8 @@ Ext.define('Template.Application', {
                                     formData,
                                     callback = function () {
                                         Html2pdfUtil.getFile({
-                                            element: doc.querySelector('.WordSection1'),
-                                            fileName: 'download.pdf'
+                                            element: doc.querySelector('.Content'),
+                                            fileName: 'download.pdf',
                                         }).then(function (file) {
                                             formData = new FormData();
                                             formData.append('file', file);
@@ -210,7 +210,14 @@ Ext.define('Template.Application', {
                                         });
                                     };
 
-                                callback();
+                                if (Ext.Package && !Ext.Package.isLoaded(pkgNm)) {
+                                    Ext.Package.load(pkgNm)
+                                        .then(function () {
+                                            callback();
+                                        });
+                                } else {
+                                    callback();
+                                }
                             }
                         }
                     ]
