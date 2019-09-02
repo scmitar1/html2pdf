@@ -30,7 +30,6 @@ Ext.define('Template.util.FileUtil', {
             xhr, wait, fn, ret;
 
         if (url) {
-            wait = Ext.wait();
             xhr = this.createReq(url);
             xhr.withCredentials = true;
             xhr.onload = function () {
