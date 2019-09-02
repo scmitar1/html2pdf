@@ -16675,7 +16675,7 @@ Ext.define('Html2pdf.Lib', {
                             // Add the page to the PDF.
                             if (page) this.prop.pdf.addPage();
                             var imgData = pageCanvas.toDataURL('image/' + opt.image.type, opt.image.quality);
-                            this.prop.pdf.addImage(imgData, opt.image.type, opt.margin[1], opt.margin[0], this.prop.pageSize.inner.width, pageHeight);
+                            imgData.length > 6 && this.prop.pdf.addImage(imgData, opt.image.type, opt.margin[1], opt.margin[0], this.prop.pageSize.inner.width, pageHeight);
                         }
                     });
                 };
