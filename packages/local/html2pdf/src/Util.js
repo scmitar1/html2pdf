@@ -4,34 +4,28 @@ Ext.define('Html2pdf.Util', {
     defaultConfig: {
         margin: 5
     },
-    downloadFile: function (args) {
-        var $me = this,
-            $win = args['window'];
+
+    getDefaultInst: function (args) {
+        var $win = args['window'];
 
         if ($win && window !== $win) {
-            var inst = $win.html2pdf(),
-                element = args['element'],
-                fileName = args['fileName'],
-                cfg = Ext.apply($me.defaultConfig, {
-                    filename: fileName || 'pdf.pdf'
-                });
-
-            inst.set(cfg).from(element).then(function () {
-                var me = this;
-
-                setTimeout(function () {
-                    me.save()
-                }, 500);
-            });
-
+            return $win.html2pdf()
         } else {
-            this.loadLib(function () {
-                var inst = html2pdf(),
+            return html2pdf();
+        }
+    },
+
+    downloadFile: function (args) {
+        var $me = this,
+            $win = args['window'],
+            fn = function () {
+                var inst = $me.getDefaultInst(args),
                     element = args['element'],
                     fileName = args['fileName'],
                     cfg = Ext.apply($me.defaultConfig, {
                         filename: fileName || 'pdf.pdf'
                     });
+
                 inst.set(cfg).from(element).then(function () {
                     var me = this;
 
@@ -39,26 +33,30 @@ Ext.define('Html2pdf.Util', {
                         me.save()
                     }, 500);
                 });
+            };
+
+        if ($win && window !== $win) {
+            fn();
+        } else {
+            this.loadLib(function () {
+                fn();
             });
         }
-
     },
 
     getFile: function (args) {
         var $me = this,
-            $win = args['window'];
+            $win = args['window'],
+            fn = function () {
+                var file, ab, idx, uint8Array,
+                    element = args['element'],
+                    fileName = args['fileName'],
+                    cfg = Ext.apply($me.defaultConfig, {
+                        filename: fileName || 'pdf.pdf',
+                        margin: 5
+                    });
 
-        if ($win && $win !== window) {
-            var file, ab, idx, uint8Array,
-                element = args['element'],
-                fileName = args['fileName'],
-                cfg = Ext.apply($me.defaultConfig, {
-                    filename: fileName || 'pdf.pdf',
-                    margin: 5
-                });
-
-            return new Promise(function (res) {
-                $win.html2pdf().set(cfg).from(element).then(function () {
+                $me.getDefaultInst(args).set(cfg).from(element).then(function () {
                     var me = this;
 
                     setTimeout(function () {
@@ -76,40 +74,20 @@ Ext.define('Html2pdf.Util', {
                         })
                     }, 500);
                 });
+            };
+
+        if ($win && $win !== window) {
+            return new Promise(function (res) {
+                fn();
             });
         } else {
-            this.loadLib(function () {
-                var file, ab, idx, uint8Array,
-                    element = args['element'],
-                    fileName = args['fileName'],
-                    cfg = Ext.apply($me.defaultConfig, {
-                        filename: fileName || 'pdf.pdf',
-                        margin: 5
-                    });
+            return new Promise(function (res) {
 
-                return new Promise(function (res) {
-                    html2pdf().set(cfg).from(element).then(function () {
-                        var me = this;
-
-                        setTimeout(function () {
-                            me.outputPdf().then(function (str) {
-                                ab = new ArrayBuffer(str.length);
-                                uint8Array = new Uint8Array(ab);
-                                idx = str.length;
-                                for (; idx--;) {
-                                    uint8Array[idx] = str.charCodeAt(idx);
-                                }
-                                file = new Blob([ab], {
-                                    type: 'application/pdf'
-                                });
-                                res(file);
-                            })
-                        }, 500);
-                    });
+                $me.loadLib(function () {
+                    fn();
                 });
             });
         }
-
     },
 
     loadLib: function (callback) {
