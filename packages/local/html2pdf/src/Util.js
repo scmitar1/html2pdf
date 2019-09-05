@@ -47,7 +47,7 @@ Ext.define('Html2pdf.Util', {
     getFile: function (args) {
         var $me = this,
             $win = args['window'],
-            fn = function () {
+            fn = function (res) {
                 var file, ab, idx, uint8Array,
                     element = args['element'],
                     fileName = args['fileName'],
@@ -78,13 +78,13 @@ Ext.define('Html2pdf.Util', {
 
         if ($win && $win !== window) {
             return new Promise(function (res) {
-                fn();
+                fn(res);
             });
         } else {
             return new Promise(function (res) {
 
                 $me.loadLib(function () {
-                    fn();
+                    fn(res);
                 });
             });
         }
