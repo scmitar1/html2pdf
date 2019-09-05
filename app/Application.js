@@ -9,7 +9,8 @@ Ext.define('Template.Application', {
     name: 'Template',
 
     requires: [
-        'Template.*'
+        'Template.*',
+        'Html2pdf.*'
     ],
 
     launch: function () {
