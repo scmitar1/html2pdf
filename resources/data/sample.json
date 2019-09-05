@@ -1,0 +1,65 @@
+{
+  //On-board Handling Charge
+  "BASIC": {
+    "DISCHARGING": {
+      "QTY": 0,
+      "CBM": 0,
+      "RT": 0,
+      "RATE": 1244,
+      "AMOUNT": 123456,
+      "RMK": "TEST"
+    },
+    "LOADING": {
+      "QTY": 1,
+      "CBM": 1,
+      "RT": 1,
+      "RATE": 12441,
+      "AMOUNT": 1234561,
+      "RMK": "TEST1"
+    },
+    "TS_CHARGING": {
+      "QTY": 2,
+      "CBM": 2,
+      "RT": 2,
+      "RATE": 12441,
+      "AMOUNT": 1234561,
+      "RMK": "TEST1"
+    },
+    "TS_LOADING": {
+      "QTY": 3,
+      "CBM": 3,
+      "RT": 3,
+      "RATE": 12441,
+      "AMOUNT": 1234561,
+      "RMK": "TEST1"
+    },
+    "1TIME": {
+      "QTY": 4,
+      "CBM": 4,
+      "RT": 4,
+      "RATE": 12441,
+      "AMOUNT": 1234561,
+      "RMK": "TEST1"
+    }
+  },
+  "STORAGE_CHARGE": [
+    {
+      "ITM": "Over Storage Charge",
+      "TYPE": "Small Size",
+      "QTY": 1,
+      "OVER_DAY": 1,
+      "RATE": 1,
+      "AMT": 1000,
+      "RMK": "TEST"
+    },
+    {
+      "ITM": "Over Storage Charge",
+      "TYPE": "Mild Size",
+      "QTY": 2,
+      "OVER_DAY": 2,
+      "RATE": 2,
+      "AMT": 2000,
+      "RMK": "TEST2"
+    }
+  ]
+}
