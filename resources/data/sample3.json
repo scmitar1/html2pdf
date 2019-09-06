@@ -1,0 +1,284 @@
+/*
+sample data for template3.html
+*/
+
+{
+  "list": [
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    },
+    {
+      "FROM": "MV.BROOKLANDS V.004",
+      "DATE": "19-07-01",
+      "TYPE": "Mid Size",
+      "QTY": 15,
+      "STORAGE": 4,
+      "FREE_DAY": 3,
+      "OVERDAY": 1,
+      "RATE": 5000,
+      "AMOUNT": 75000
+    }
+  ],
+  "sum": 75000
+}
