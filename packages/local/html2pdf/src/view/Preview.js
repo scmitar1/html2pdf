@@ -1,4 +1,7 @@
 Ext.define('Html2pdf.view.Preview', {
+    requires: [
+        'Html2pdf.Renderer'
+    ],
     extend: 'Ext.panel.Panel',
     layout: 'fit',
     config: {
@@ -15,29 +18,32 @@ Ext.define('Html2pdf.view.Preview', {
                 afterrender: function () {
                     var me = this,
                         parent = me.up('panel'),
-                        pkgNm = 'html2pdf',
                         win = me.getWin(),
-                        callback = function () {
-                            if (Ext.isFunction(parent.loadPreviewData)) {
-                                parent.loadPreviewData(function (data) {
-                                    if (data) {
-                                        Html2pdfUtil.loadLibToIframe({
-                                            window: win,
-                                            template: parent.getTemplate(),
-                                            data: data
-                                        })
-                                    }
-                                });
-                            }
-                        };
+                        template = parent.getTemplate(),
+                        templateConfig;
 
-                    if (Ext.Package && !Ext.Package.isLoaded(pkgNm)) {
-                        Ext.Package.load(pkgNm)
-                            .then(function () {
-                                callback();
-                            });
-                    } else {
-                        callback();
+                    if (Ext.isString(template)) {
+                        template = {
+                            url: template
+                        }
+                    }
+                    if (!Ext.isObject(template)) {
+                        Ext.log.error('Wrong Template config');
+                        return;
+                    }
+                    templateConfig = template['config'] = (template['config'] || {});
+                    Ext.apply(templateConfig, Html2pdfRenderer.getRenderer());
+
+                    if (Ext.isFunction(parent.loadPreviewData)) {
+                        parent.loadPreviewData(function (data) {
+                            if (data) {
+                                Html2pdfUtil.loadLibToIframe({
+                                    window: win,
+                                    template: template,
+                                    data: data
+                                })
+                            }
+                        });
                     }
                 }
             }
@@ -63,57 +69,30 @@ Ext.define('Html2pdf.view.Preview', {
                     xtype: 'button',
                     text: 'PDF',
                     handler: function (btn) {
-                        var pkgNm = 'html2pdf',
-                            panel = btn.up('panel').down('uxiframe'),
+                        var panel = btn.up('panel').down('uxiframe'),
                             parent = panel.up('panel'),
-                            doc = panel.getDoc(),
-                            callback = function () {
-                                Html2pdfUtil.downloadFile({
-                                    element: doc.querySelector(parent.getSelector()),
-                                    fileName: parent.getFileName(),
-                                    window: panel.getWin()
-                                });
-                            };
+                            doc = panel.getDoc();
 
-                        if (Ext.Package && !Ext.Package.isLoaded(pkgNm)) {
-                            Ext.Package.load(pkgNm)
-                                .then(function () {
-                                    callback();
-                                });
-                        } else {
-                            callback();
-                        }
+                        Html2pdfUtil.downloadFile({
+                            element: doc.querySelector(parent.getSelector()),
+                            fileName: parent.getFileName(),
+                            window: panel.getWin()
+                        });
                     }
                 },
                 {
                     xtype: 'button',
                     text: 'E-mail',
                     handler: function (btn) {
-                        var pkgNm = 'html2pdf',
-                            panel = btn.up('panel').down('uxiframe'),
+                        var panel = btn.up('panel').down('uxiframe'),
                             parent = panel.up('panel'),
-                            doc = panel.getDoc(),
+                            doc = panel.getDoc();
 
-                            callback = function () {
-                                Html2pdfUtil.getFile({
-                                    element: doc.querySelector(parent.getSelector()),
-                                    fileName: parent.getFileName(),
-                                    window: panel.getWin(),
-                                }).then(function (file) {
-                                    if (Ext.isFunction(parent.uploadFile)) {
-                                        parent.uploadFile(file);
-                                    }
-                                });
-                            };
-
-                        if (Ext.Package && !Ext.Package.isLoaded(pkgNm)) {
-                            Ext.Package.load(pkgNm)
-                                .then(function () {
-                                    callback();
-                                });
-                        } else {
-                            callback();
-                        }
+                        Html2pdfUtil.downloadFile({
+                            element: doc.querySelector(parent.getSelector()),
+                            fileName: parent.getFileName(),
+                            window: panel.getWin()
+                        });
                     }
                 }
             ]
