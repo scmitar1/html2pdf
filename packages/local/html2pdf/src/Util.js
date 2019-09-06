@@ -3,7 +3,7 @@ Ext.define('Html2pdf.Util', {
     singleton: true,
     defaultConfig: {
         margin: 5,
-        // html2canvas:  { dpi: 96, letterRendering: true } 혹시 몰라서..
+        html2canvas:  { dpi: 96, letterRendering: true }
     },
 
     getDefaultInst: function (args) {
