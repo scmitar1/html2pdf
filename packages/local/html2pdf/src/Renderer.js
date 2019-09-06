@@ -6,7 +6,7 @@ Ext.define('Html2pdf.Renderer', {
             getNumberValue: function (k) {
                 var v = this.getValue(k);
 
-                if (v && Ext.isNumeric(k)) {
+                if (v && Ext.isNumeric(v)) {
                     return Ext.util.Format.number(v, '#,###');
                 } else {
                     return '-';
