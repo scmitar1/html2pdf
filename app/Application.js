@@ -22,47 +22,7 @@ Ext.define('Template.Application', {
             items: [
                 {
                     xclass: 'Html2pdf.view.Preview',
-                    template: {
-                        url: 'resources/html/template2.html',
-                        config: {
-                            getNumberValue: function (k) {
-                                var v = this.getValue(k);
-
-                                if (v && Ext.isNumeric(k)) {
-                                    return Ext.util.Format.number(v, '#,###');
-                                } else {
-                                    return '-';
-                                }
-                            },
-                            getNumberValueForLoop: function (values, k) {
-                                var v = values[k];
-
-                                if (v && Ext.isNumeric(v)) {
-                                    return Ext.util.Format.number(v, '#,###');
-                                } else {
-                                    return '-';
-                                }
-                            },
-                            getTextValue: function (k) {
-                                var v = this.getValue(k);
-
-                                if (v) {
-                                    return '' + v;
-                                }
-                            },
-                            getValue: function (k) {
-                                var addr = k.split('.'),
-                                    values = this.fn.arguments[1],
-                                    cursor = values, v;
-
-                                Ext.each(addr, function (str) {
-                                    v = cursor = cursor && cursor[str];
-                                });
-
-                                return v;
-                            }
-                        }
-                    },
+                    template: 'resources/html/template2.html',
                     selector: '.Content',
                     fileName: 'download.pdf',
                     loadPreviewData: function (cb) {
