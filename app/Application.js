@@ -50,7 +50,6 @@ Ext.define('Template.Application', {
                                     return '' + v;
                                 }
                             },
-
                             getValue: function (k) {
                                 var addr = k.split('.'),
                                     values = this.fn.arguments[1],
@@ -64,6 +63,7 @@ Ext.define('Template.Application', {
                             }
                         }
                     },
+                    selector: '.Content',
                     fileName: 'download.pdf',
                     loadPreviewData: function (cb) {
                         Ext.Ajax.request({
