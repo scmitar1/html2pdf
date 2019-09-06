@@ -22,7 +22,7 @@ Ext.define('Template.Application', {
             items: [
                 {
                     xclass: 'Html2pdf.view.Preview',
-                    template: 'resources/html/template2.html',
+                    template: 'resources/html/template3.html',
                     selector: '.Content',
                     fileName: 'download.pdf',
                     loadPreviewData: function (cb) {
@@ -47,8 +47,7 @@ Ext.define('Template.Application', {
                         })
                     }
                 }
-            ],
-
+            ]
         }).show();
     },
 
