@@ -3,7 +3,8 @@ Ext.define('Html2pdf.view.Preview', {
     layout: 'fit',
     config: {
         template: null,
-        fileName: 'pdf.pdf'
+        fileName: 'pdf.pdf',
+        selector: '.Content'
     },
     loadPreviewData: Ext.emptyFn,
     uploadFile: Ext.emptyFn,
@@ -68,7 +69,7 @@ Ext.define('Html2pdf.view.Preview', {
                             doc = panel.getDoc(),
                             callback = function () {
                                 Html2pdfUtil.downloadFile({
-                                    element: doc.querySelector('.Content'),
+                                    element: doc.querySelector(parent.getSelector()),
                                     fileName: parent.getFileName(),
                                     window: panel.getWin()
                                 });
@@ -95,7 +96,7 @@ Ext.define('Html2pdf.view.Preview', {
 
                             callback = function () {
                                 Html2pdfUtil.getFile({
-                                    element: doc.querySelector('.Content'),
+                                    element: doc.querySelector(parent.getSelector()),
                                     fileName: parent.getFileName(),
                                     window: panel.getWin(),
                                 }).then(function (file) {
