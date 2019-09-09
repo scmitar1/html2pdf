@@ -27,7 +27,7 @@ Ext.define('Template.Application', {
                     fileName: 'download.pdf',
                     loadPreviewData: function (cb) {
                         Ext.Ajax.request({
-                            url: 'resources/data/sample.json',
+                            url: 'resources/data/sample3.json',
                             success: function (res) {
                                 var data = Ext.decode(res.responseText);
                                 cb(data);
